@@ -14,6 +14,7 @@ import SELFISH from '../../static/image/logo192.png';
 
 export default function Dialog() {
   const [inputValue, setInputValue] = useState('');
+  const [list, setList] = useState(['111']);
   // const [lastInput, setLastInput] = useState('');
   // 头像的自定义样式
   const wapperStyle = {
@@ -32,9 +33,10 @@ export default function Dialog() {
   };
   // 点击发送按钮，展示对话内容至聊天记录
   function dialogClick() {
-    const lastInput = inputValue; 
-    console.log(lastInput)
+    debugger;
+    setList(...list, inputValue);
     setInputValue('');
+    console.log(list)
   }
   
   return (
@@ -42,10 +44,13 @@ export default function Dialog() {
       <div className="dialog-header">
         <HeadProtrait wapperStyle={wapperStyle} />
       </div>
-      <div className='dialog-content'>
-        <img src={SELFISH} className="portrait-selfish" />
-        <span>{inputValue}</span>
-      </div>
+      {list ? list.map((item, index) => (
+        <div className='dialog-content' key={index+1}>
+          <img src={SELFISH} className="portrait-selfish" />
+          <span>{item}</span>
+        </div>
+      )): null}
+      
       <div className="dialog-footer">
         <input placeholder='请输入' value={inputValue} type='text' name='dialog-input' className='dialog-input' onChange={(e) => setInputValue(e.target.value)} />
         <Button ButtonContent={'发送'} ButtonStyle={ButtonStyle} onClickItem={dialogClick} />

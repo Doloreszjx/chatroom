@@ -5,7 +5,8 @@ import HeadPortrait from './components/HeadPortrait';
 import Toast from './components/Toast';
 import Register from './modules/Register/index';
 import Log from './modules/Log/index';
+import Dialog from './modules/Dialog/index';
 
 export default function App() {
-	return <Log />;
+	return <Dialog />;
 }

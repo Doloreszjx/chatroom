@@ -1,0 +1,12 @@
+.dialog-wrapper {
+	width: 520px;
+	height: 541px;
+	border: 1px solid #979797;
+	border-radius: 2px;
+}
+.dialog-header {
+	height: 64px;
+
+	background-color: #f4f0f0;
+	border-bottom: #d8d8d8;
+}

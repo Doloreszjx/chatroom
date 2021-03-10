@@ -1,0 +1,18 @@
+.register-wrapper {
+	margin: 0 auto;
+	width: 280px;
+	height: 400px;
+	border-radius: 2px;
+	border: 1px solid #d8d8d8;
+}
+.register-title {
+	font-size: 24px;
+	margin-left: 12px;
+}
+.register-form {
+	text-align: center;
+	margin: 68px 0 48px 0;
+}
+.register-form div {
+	margin-bottom: 36px;
+}

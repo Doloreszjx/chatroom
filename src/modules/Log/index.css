@@ -1,0 +1,33 @@
+.log-wrapper {
+	position: relative;
+	margin: 0 auto;
+	align-items: center;
+	text-align: center;
+	width: 280px;
+	height: 400px;
+	border-radius: 2px;
+	border: 1px solid #d8d8d8;
+}
+.log-swich {
+	position: absolute;
+	top: 5px;
+	left: 2px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #b1aaaa;
+	border-radius: 50%;
+	background-color: #d8d8d8;
+	z-index: 2;
+}
+.log-swich:hover {
+	background-color: #ed4e4e;
+	border: 1px solid #911818;
+}
+.log-register {
+	margin-top: 12px;
+	text-decoration-line: underline;
+	color: #d42f81;
+}
+.log-register:hover {
+	color: #ad1f65;
+}

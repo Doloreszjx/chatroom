@@ -1,25 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDom from 'react-dom';
+import Button from './components/Button';
+import HeadPortrait from './components/HeadPortrait';
+import Toast from './components/Toast';
+import Register from './modules/Register/index';
+import Log from './modules/Log/index';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	return <Log />;
 }
-
-export default App;

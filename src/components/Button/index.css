@@ -1,0 +1,16 @@
+.button-wrapper {
+	height: 45px;
+	text-align: center;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	margin: 12px;
+	background-color: #d42f81;
+}
+.button-wrapper:hover {
+	background-color: #ad1f65;
+}
+.button-word {
+	line-height: 45px;
+	font-size: 20px;
+	color: #fff;
+}

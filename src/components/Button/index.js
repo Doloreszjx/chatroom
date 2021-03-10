@@ -10,12 +10,13 @@ export default function Button(props) {
    */
   const {
     ButtonContent,
+    ButtonStyle,
     onClickItem=()=>{} 
   } = props;
   
   return (
-    <div className="button-wrapper" onClick={onClickItem}>
-      <span className="button-word">{ButtonContent}</span>
+    <div className="button-wrapper" style={ButtonStyle} onClick={onClickItem}>
+      <span className="button-word" style={ButtonStyle.buttonWord}>{ButtonContent}</span>
     </div>
   )
 }

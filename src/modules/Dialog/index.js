@@ -14,7 +14,7 @@ import SELFISH from '../../static/image/logo192.png';
 
 export default function Dialog() {
   const [inputValue, setInputValue] = useState('');
-  const [list, setList] = useState(['111']);
+  const [list, setList] = useState([]);
   // const [lastInput, setLastInput] = useState('');
   // 头像的自定义样式
   const wapperStyle = {
@@ -33,8 +33,7 @@ export default function Dialog() {
   };
   // 点击发送按钮，展示对话内容至聊天记录
   function dialogClick() {
-    debugger;
-    setList(...list, inputValue);
+    setList([...list, inputValue]);
     setInputValue('');
     console.log(list)
   }

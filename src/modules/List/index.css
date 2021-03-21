@@ -1,0 +1,23 @@
+.list-wrapper {
+	width: 320px;
+	height: 553px;
+	border-radius: 2px;
+	border: 1px solid #979797;
+	background-color: #f4f1f1;
+}
+.list-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 64px;
+	padding: 0 8px 0 8px;
+	background-color: #f4f0f0;
+	border-bottom: 1px solid #979797;
+}
+.list-search {
+	width: 247px;
+	height: 36px;
+}
+.list-content {
+	list-style: none;
+}

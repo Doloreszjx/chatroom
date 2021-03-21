@@ -6,7 +6,8 @@ import Toast from './components/Toast';
 import Register from './modules/Register/index';
 import Log from './modules/Log/index';
 import Dialog from './modules/Dialog/index';
+import List from './modules/List';
 
 export default function App() {
-	return <Dialog />;
+	return <List />;
 }

@@ -19,5 +19,16 @@
 	height: 36px;
 }
 .list-content {
+	border-bottom: 1px solid #979797;
+	height: 62px;	
+}
+.list-item {
 	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.list-time {
+	font-size: 14px;
+	color: #BBBBBB;
 }

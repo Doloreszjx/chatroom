@@ -13,8 +13,8 @@ import SELFISH from '../../static/image/logo192.png';
 export default function HeadPortrait(props) {
   const {wapperStyle} = props;
   return (
-    <div className="portrait-wrapper" style={wapperStyle}>
-      <img src={SELFISH} className="portrait-selfish" />
+    <div className="portrait-wrapper" style={wapperStyle.portraitWrapper}>
+      <img src={SELFISH} className="portrait-selfish" style={wapperStyle.portraitSelfish} />
       <span className="portrait-username">宇宙鑫</span>
     </div>
   )

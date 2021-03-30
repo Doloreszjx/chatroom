@@ -11,10 +11,16 @@ export default function List() {
       marginRight: `${8}px`
     }
   }
+  // 匹配好友名
+  function searchValue(e) {
+    const currentValue = e.target.value;
+    console.log(currentValue);
+
+  }
   return (
     <div className='list-wrapper'>
       <div className='list-header'>
-        <input type='text' placeholder='搜索' className='list-search' />
+        <input type='text' placeholder='搜索' className='list-search' onChange={searchValue} />
         <img src={AddIcon} />
       </div>
       <ul className='list-content'> 

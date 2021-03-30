@@ -9,5 +9,5 @@ import Dialog from './modules/Dialog/index';
 import List from './modules/List';
 
 export default function App() {
-	return <List />;
+	return <Log />;
 }

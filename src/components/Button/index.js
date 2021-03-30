@@ -10,7 +10,7 @@ export default function Button(props) {
    */
   const {
     ButtonContent,
-    ButtonStyle,
+    ButtonStyle={},
     onClickItem=()=>{} 
   } = props;
   

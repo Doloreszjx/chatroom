@@ -23,6 +23,9 @@
 	background-color: #ed4e4e;
 	border: 1px solid #911818;
 }
+.log-button-wrapper {
+	margin-top: 260px;
+}
 .log-register {
 	margin-top: 12px;
 	text-decoration-line: underline;

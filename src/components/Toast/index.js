@@ -16,17 +16,14 @@ export default function Toast(props) {
 	useEffect(() => {
 		// 弹框两秒后隐藏
 		setTimeout(() => {
-			setOpacity(0);
-		}, 2000)
+			setOpacity(0); 
+		}, 2500)
 	})
 	
 	return (
-		
-			<div className='toast-wrapper' style={{opacity}}>
-				<h2 className='toast-title'>同志你好!</h2>
-				<span className='toast-content'>{toastContent}</span>
-			</div>
-		
-	
+		<div className='toast-wrapper' style={{opacity}}>
+			<h3 className='toast-title'>同志你好!</h3>
+			<span className='toast-content'>{toastContent}</span>
+		</div>
 	);
 }

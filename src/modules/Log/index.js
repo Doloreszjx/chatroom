@@ -4,6 +4,7 @@ import Button from '../../components/Button';
 // 交互
 import getRequestUrl from '../../publicMethods/getRequestUrl';
 import axios from 'axios';
+import Toast from '../../components/Toast';
 
 // 公用方法
 import isObjectValueEqual from '../../publicMethods/compareObject';
@@ -12,11 +13,17 @@ import './index.css';
 
 export default function Log(props) {
   const [isShow, setIsShow] = useState(true);
+  const [needRegister, setNeedRegister] = useState(false);
   const [userList, setUserList] = useState([]);
   const [userData, setUserdata] = useState({
     "username": "",
     "password": ""
   })
+
+  // 登陆按钮自定义样式
+  const logButtonStyle = {
+    width: `${232}px`
+  }
 
   // 获取当前注册用户id及登陆密码
   useEffect(() => {
@@ -45,6 +52,7 @@ export default function Log(props) {
           console.log('login successd')
           return true;
         }
+        setNeedRegister(true);
         console.log('register please');
       }
   }
@@ -55,7 +63,8 @@ export default function Log(props) {
       {isShow ? 
       <div className="log-wrapper">
         <span className="log-swich" onClick={() => setIsShow(false)}></span>
-        <form>
+			  <h2 className='log-title'>欢迎加入宇宙号</h2>
+        <form className="log-form-wrapper">
         <div>
 					<span>代号：</span>
 					<input
@@ -74,10 +83,13 @@ export default function Log(props) {
 					/>
 				</div>
         </form>
+        {needRegister ?  <Toast toastContent={"请同志填写加入宇宙号申请，敬礼！"} /> : null }
         <div className='log-button-wrapper'>
-          <Button ButtonContent={'登陆'} onClickItem={logClick} />
+          <Button ButtonContent={'登陆'} ButtonStyle={logButtonStyle} onClickItem={logClick} />
           <span className="log-register" onClick={handleLog}>注册</span>
         </div>
+         
+        
       </div>
     : null}
     </>

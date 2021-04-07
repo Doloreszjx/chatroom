@@ -9,7 +9,6 @@ export default function compareObjectValue(objA, objB) {
   for(let i = 0; i < aProperty.length; i++) {
     let proKey = aProperty[i];
     if(objA[proKey] !== objB[proKey]) {
-      console.log(objA[proKey], objB[proKey])
       return false;
     }
   }

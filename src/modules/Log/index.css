@@ -1,6 +1,8 @@
 .log-wrapper {
 	position: relative;
-	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 	width: 280px;
@@ -11,7 +13,7 @@
 .log-swich {
 	position: absolute;
 	top: 5px;
-	left: 2px;
+	left: 5px;
 	width: 15px;
 	height: 15px;
 	border: 1px solid #b1aaaa;
@@ -19,12 +21,26 @@
 	background-color: #d8d8d8;
 	z-index: 2;
 }
+.log-title {
+	position: absolute;
+	font-size: 24px;
+	top: 30px;
+	left: 15px;
+}
 .log-swich:hover {
 	background-color: #ed4e4e;
 	border: 1px solid #911818;
 }
+.log-form-wrapper {
+	position: absolute;
+	top: 144px;
+}
+.log-form-wrapper div {
+	padding-bottom: 48px;
+}
 .log-button-wrapper {
-	margin-top: 260px;
+	position: absolute;
+	margin-top: 240px;
 }
 .log-register {
 	margin-top: 12px;

@@ -5,11 +5,12 @@
 	display: flex;
 	flex-direction: column;
 	width: 210px;	
-	padding: 8px;
+	padding: 12px;
 	border: 2px solid #979797;
 	border-radius: 2px;
 	opacity: 1;
 	transition: opacity 0.5s;
+	background-color:#D8D8D8;
 	z-index: 2;
 }
 .toast-title {

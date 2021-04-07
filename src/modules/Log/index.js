@@ -15,10 +15,7 @@ export default function Log(props) {
   const [isShow, setIsShow] = useState(true);
   const [needRegister, setNeedRegister] = useState(false);
   const [userList, setUserList] = useState([]);
-  const [userData, setUserdata] = useState({
-    "username": "",
-    "password": ""
-  })
+  const [userData, setUserdata] = useState({});
 
   // 登陆按钮自定义样式
   const logButtonStyle = {
@@ -56,8 +53,10 @@ export default function Log(props) {
         console.log('register please');
       }
   }
-  // 注册
-  function handleLog() {}
+  // 注册,调转至注册页
+  function handleLog() {
+    
+  }
   return (
     <>
       {isShow ? 
@@ -71,7 +70,7 @@ export default function Log(props) {
 						type='text'
 						placeholder='昵称不可超过8个字符'
 						name='username'
-						onChange={(e) => setUserdata({...userData, 'username': e.target.value})}
+						onChange={(e) => setUserdata({...userData, [e.target.name]: e.target.value})}
 					/>
 				</div>
 				<div>
@@ -79,7 +78,7 @@ export default function Log(props) {
 					<input
 						type='password'
 						name='password'
-						onChange={(e) => setUserdata({...userData, 'password': e.target.value})}
+						onChange={(e) => setUserdata({...userData, [e.target.name]: e.target.value})}
 					/>
 				</div>
         </form>
@@ -87,9 +86,7 @@ export default function Log(props) {
         <div className='log-button-wrapper'>
           <Button ButtonContent={'登陆'} ButtonStyle={logButtonStyle} onClickItem={logClick} />
           <span className="log-register" onClick={handleLog}>注册</span>
-        </div>
-         
-        
+        </div>  
       </div>
     : null}
     </>
